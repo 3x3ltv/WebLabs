@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3e3534;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+
+.top
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo
+{
+    width: 200px;
+    height: 140px;
+}
+.container
+{
+    width: 200px;
+    height: 300px;
+}
+
+header {
+    background-color: #554c4a;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #726967;
+}
+
+nav button {
+    background-color: #bfb8b6;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+article {
+    width: 200px;
+    text-align: center;
+}
+button
+{
+    width: 170px;
+}
+
+.filmbutton{
+    border: #554c4a;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 10px 5px 10px #bfb8b6;
+}
+
+footer {
+    background-color: #2b2524;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.pseudo-graphics {
+    font-family: monospace;
+    white-space: pre;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.snippet {
+    background-color: #4e4442;
+    padding: 10px;
+    margin: 20px 0;
+    font-family: monospace;
+    white-space: pre;
+}
+
+.quote {
+    font-style: italic;
+    margin: 20px 0;
+}

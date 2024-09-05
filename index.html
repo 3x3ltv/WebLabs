@@ -5,93 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KinoWEB - Лучший опыт просмотра</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #3e3534;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #554c4a;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      background-color: #726967;
-    }
-
-    nav button {
-      background-color: #bfb8b6;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 5px;
-      cursor: pointer;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    article {
-      width: 200px;
-      text-align: center;
-    }
-
-    button{
-       width: 180px;
-      border: #554c4a;
-      background: #bfb8b6;
-    }
-
-    footer {
-      background-color: #2b2524;
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .pseudo-graphics {
-      font-family: monospace;
-      white-space: pre;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .snippet {
-      background-color: #4e4442;
-      padding: 10px;
-      margin: 20px 0;
-      font-family: monospace;
-      white-space: pre;
-    }
-
-    .quote {
-      font-style: italic;
-      margin: 20px 0;
-    }
-
-  </style>
+  <meta name="keywords" content="фильмы, сериалы, онлайн, популярные фильмы, кино, фильмы 2024">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 <header>
-  <h1>KinoWEB</h1>
-  <p>Лучший опыт просмотра</p>
+  <div class="top">
+    <img src="logo.png" class="logo" alt="Logotype">
+    <div>
+      <h1>KinoWEB</h1>
+      <p>Лучший опыт просмотра</p>
+    </div>
+  </div>
 </header>
 
 <nav>
@@ -104,60 +30,83 @@
 <main>
   <section>
     <article>
-      <img src=game_of_thrones.jpg alt="Game of Thrones" class="show" width="200">
-      <p>Game of Thrones</p>
-    </article>
-    <article>
-      <img src="lord_of_the_rings.jpg" alt="Lord of the Rings" class="film" width="200">
-      <p>Lord of the Rings</p>
-    </article>
-    <article>
-      <img src="big_bang_theory.jpg" alt="Big Bang Theory" class="show" width="200">
-      <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-        <button type="submit">Big Bang Theory</button>
+      <img src=game_of_thrones.jpg alt="Game of Thrones" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
       </form>
     </article>
     <article>
-      <img src="star_wars.jpg" alt="Star Wars" class="film" width="200">
-      <p>Star Wars</p>
+      <img src="lord_of_the_rings.jpg" alt="Lord of the Rings" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="green_mile.jpg" alt="The Green Mile" class="film" width="200">
-      <p>The Green Mile</p>
+      <img src="big_bang_theory.jpg" alt="Big Bang Theory" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="mad_max.jpg" alt="Mad Max" class="film" width="200">
-      <p>Mad Max</p>
+      <img src="star_wars.jpg" alt="Star Wars" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="spiderman.jpg" alt="Spider-Man" class="film" width="200">
-      <p>Spider-Man</p>
+      <img src="green_mile.jpg" alt="The Green Mile" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="thor_love_and_thunder.jpg" alt="Thor: Love and Thunder" class="film" width="200">
-      <p>Thor: Love and Thunder</p>
+      <img src="mad_max.jpg" alt="Mad Max" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="definitely_maybe.jpg" alt="Definitely, Maybe" class="film" width="200">
-      <p>Definitely, Maybe</p>
+      <img src="spiderman.jpg" alt="Spider-Man" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="21_jump_street.jpg" class="film" alt="21 Jump Street" width="200">
-      <p>21 Jump Street</p>
+      <img src="thor_love_and_thunder.jpg" alt="Thor: Love and Thunder" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="harry_potter.jpg" alt="Harry Potter and the Prisoner of Azkaban" class="film" width="200">
-      <p>Harry Potter and the Prisoner of Azkaban</p>
+      <img src="definitely_maybe.jpg" alt="Definitely, Maybe" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
     <article>
-      <img src="superbad.jpg" alt="Superbad" class="film" width="200">
-      <p>Superbad</p>
+      <img src="21_jump_street.jpg" class="container" alt="21 Jump Street" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="harry_potter.jpg" alt="Harry Potter and the Prisoner of Azkaban" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="superbad.jpg" alt="Superbad" class="container" width="200">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
     </article>
   </section>
 </main>
 
 <footer>
-  <p>Some useful information about our site</p>
+  <p>Some useful information about my site</p>
+  <p><a href="mailto:makkanygin@gmail.com">makkanygin@gmail.com</a></p>
 </footer>
 </body>
 
