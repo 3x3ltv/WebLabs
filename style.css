@@ -76,7 +76,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     background-color: #726967;
-    padding: 10px 0 10px;
+    padding: 0;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
