@@ -29,17 +29,33 @@ nav button {
     cursor: pointer;
     font-size: 16px;
 }
+nav button:nth-child(1)
+{
+    order: 1;
+}
+nav button:nth-child(2)
+{
+    order: 2;
+}
+nav button:nth-child(3)
+{
+    order: 3;
+}
+nav button:nth-child(4)
+{
+    order: 0;
+}
 
 main {
     padding: 20px;
 }
 
-
 section {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 article {
@@ -84,11 +100,14 @@ nav {
     z-index: 1000;
 }
 
+
 .movies-table {
-    width: 80%;
-    align-self: center;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
 }
 
 .movies-table th, .movies-table td {
@@ -100,6 +119,7 @@ nav {
 .movies-table th {
     background-color: #726967;
     color: white;
+    width: 100%;
 }
 
 .container {
@@ -165,4 +185,4 @@ button {
         cursor: pointer;
         font-size: 16px;
     }
-}
+} /* grid table */
