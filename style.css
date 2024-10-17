@@ -52,9 +52,9 @@ main {
 
 section {
     display: flex;
-    justify-content: center;
     padding: 20px;
     width: 100%;
+    justify-content: center;
     box-sizing: border-box;
 }
 
@@ -100,20 +100,24 @@ nav {
     z-index: 1000;
 }
 
-
 .movies-table {
     display: grid;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
     gap: 1px;
 }
 
 .movies-table th, .movies-table td {
     border: 1px solid #ddd;
+    width: 30%;
     padding: 12px;
     text-align: center;
+}
+
+.movies-table tbody
+{
+    justify-self: center;
 }
 
 .movies-table th {
