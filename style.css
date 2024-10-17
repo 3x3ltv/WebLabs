@@ -102,15 +102,12 @@ nav {
 
 .movies-table {
     display: grid;
-    width: 100%;
+    grid-template-columns: 2fr 1fr 1fr;
     margin: 0 auto;
-    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
-    gap: 1px;
 }
 
 .movies-table th, .movies-table td {
     border: 1px solid #ddd;
-    width: 30%;
     padding: 12px;
     text-align: center;
 }
@@ -119,7 +116,9 @@ nav {
 {
     justify-self: center;
 }
-
+thead,tbody, tr{
+    display: contents;
+}
 .movies-table th {
     background-color: #726967;
     color: white;
@@ -148,11 +147,11 @@ button {
     font-size: 18px;
 }
 
-.movies-table tr:nth-child(even) {
+.movies-table tr:nth-child(even) td{
     background-color: #665450;
 }
 
-.movies-table tr:nth-child(odd) {
+.movies-table tr:nth-child(odd) td{
     background-color: #433836 ;
 }
 
@@ -189,4 +188,4 @@ button {
         cursor: pointer;
         font-size: 16px;
     }
-} /* grid table */
+}
