@@ -15,6 +15,11 @@ header {
     text-align: center;
 }
 
+::-webkit-scrollbar
+{
+    width: 0;
+}
+
 nav button {
     background-color: #bfb8b6;
     width: 24%;
