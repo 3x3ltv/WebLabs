@@ -9,10 +9,11 @@ body {
 
 header {
     background-color: #554c4a;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     text-align: center;
 }
-
 
 nav button {
     background-color: #bfb8b6;
@@ -70,14 +71,13 @@ nav {
     flex-direction: row;
     justify-content: center;
     background-color: #726967;
-    padding: 10px;
+    padding: 10px 0 10px;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
-
 
 .movies-table {
     width: 80%;
