@@ -141,6 +141,10 @@ button {
         cursor: pointer;
         font-size: 16px;
     }
+    footer
+    {
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 600px) {
