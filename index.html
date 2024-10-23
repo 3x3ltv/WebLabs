@@ -13,12 +13,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
 <header>
   <div class="top">
-    <img src="images/logo.png" class="image" alt="Logotype">
+    <a href="index.html">
+      <img src="/images/logo.png" class="logo" alt="Logotype">
+    </a>
     <div>
       <h1>KinoWEB</h1>
       <p>Лучший опыт просмотра</p>
@@ -33,117 +36,79 @@
   <button>Рекомендуемое</button>
 </nav>
 <main>
-  <section>
-    <table class="movies-table">
-      <tr>
-        <td><img src="images/game_of_thrones.jpg" alt="Game of Thrones" class="container"></td>
-        <td>Game of Thrones</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/lord_of_the_rings.jpg" alt="Lord of the Rings" class="container"></td>
-        <td>Lord of the Rings</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/big_bang_theory.jpg" alt="Big Bang Theory" class="container"></td>
-        <td>Big Bang Theory</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/star_wars.jpg" alt="Star Wars" class="container"></td>
-        <td>Star Wars</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/green_mile.jpg" alt="The Green Mile" class="container"></td>
-        <td>The Green Mile</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/mad_max.jpg" alt="Mad Max" class="container"></td>
-        <td>Mad Max</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/spiderman.jpg" alt="Spider-Man" class="container"></td>
-        <td>Spider-Man</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/thor_love_and_thunder.jpg" alt="Thor: Love and Thunder" class="container"></td>
-        <td>Thor: Love and Thunder</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/definitely_maybe.jpg" alt="Definitely, Maybe" class="container"></td>
-        <td>Definitely, Maybe</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/21_jump_street.jpg" alt="21 Jump Street" class="container"></td>
-        <td>21 Jump Street</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="images/harry_potter.jpg" alt="Harry Potter and the Prisoner of Azkaban" class="container"></td>
-        <td>Harry Potter</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="  images/superbad.jpg" alt="Superbad" class="container"></td>
-        <td>Superbad</td>
-        <td>
-          <form action="https://big-bang-theory-kuraj-bambey.net/" method="get">
-            <button type="submit">Watch</button>
-          </form>
-        </td>
-      </tr>
-    </table>
+  <section class="movies-grid">
+    <article>
+      <img src="/images/game_of_thrones.jpg" alt="Game of Thrones" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/lord_of_the_rings.jpg" alt="Lord of the Rings" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/big_bang_theory.jpg" alt="Big Bang Theory" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article class="table-row">
+      <img src="/images/star_wars.jpg" alt="Star Wars" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/green_mile.jpg" alt="The Green Mile" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/mad_max.jpg" alt="Mad Max" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/spiderman.jpg" alt="Spider-Man" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/thor_love_and_thunder.jpg" alt="Thor: Love and Thunder" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/definitely_maybe.jpg" alt="Definitely, Maybe" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/21_jump_street.jpg" class="container" alt="21 Jump Street">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/harry_potter.jpg" alt="Harry Potter and the Prisoner of Azkaban" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
+    <article>
+      <img src="/images/superbad.jpg" alt="Superbad" class="container">
+      <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
+        <button type="submit">Watch</button>
+      </form>
+    </article>
   </section>
 </main>
 
