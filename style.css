@@ -127,8 +127,7 @@ nav {
     text-align: center;
 }
 
-.movies-table tbody
-{
+.movies-table tbody {
     justify-self: center;
 }
 thead,tbody, tr{
@@ -148,6 +147,36 @@ nav button.active {
 nav button:hover {
     background-color: #756360;
     color: #fff;
+}
+
+button:hover {
+    background-color: #756360;
+    color: #fff;
+}
+
+nav a {
+    background-color: #bfb8b6; /* Исходный цвет */
+    color: black;
+    text-decoration: none;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #554c4a;
+    color: #fff;
+}
+
+nav a.active {
+    background-color: #3e3534;
+    color: #fff;
+    font-weight: bold;
 }
 
 .container {
