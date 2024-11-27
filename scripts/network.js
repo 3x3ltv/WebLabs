@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const type = getTypeFromPath();
             let filteredData = type === "all" ? data : data.filter(item => item.type === type);
 
-            // Перемешиваем данные
             filteredData = shuffleArray(filteredData);
 
             preloader.style.display = "none";
