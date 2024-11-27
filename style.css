@@ -108,7 +108,8 @@ nav {
     justify-content: center;
     background-color: #726967;
     padding: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     position: sticky;
     top: 0;
     width: 100%;
@@ -158,7 +159,7 @@ nav a {
     background-color: #bfb8b6; /* Исходный цвет */
     color: black;
     text-decoration: none;
-    width: 20%;
+    width: 100%;
     display: inline-block;
     text-align: center;
     padding: 10px;
@@ -210,12 +211,48 @@ button {
     background-color: #433836 ;
 }
 
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.main-content{
+    min-height: 150px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #dba134;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.preloader.hidden {
+    display: none;
+}
+
+
 
 @media (orientation: portrait) {
     nav {
         flex-direction: column;
     }
-    nav button {
+    nav a {
         background-color: #bfb8b6;
         width: 100%;
         border: none;
@@ -234,7 +271,7 @@ button {
     nav {
         flex-direction: column;
     }
-    nav button {
+    nav a {
         background-color: #bfb8b6;
         width: 100%;
         border: none;
@@ -242,5 +279,77 @@ button {
         margin: 5px;
         cursor: pointer;
         font-size: 16px;
+    }
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #554c4a;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#video-player-placeholder iframe {
+    width: 100%;
+    min-height: 400px;
+    min-width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.movie-details {
+    background-color: #554c4a;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.description-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eae7e3;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    background-color: #726967;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-buttons button:hover {
+    background-color: #554c4a;
+}
+
+@media (max-width: 600px) {
+    #video-player-placeholder iframe {
+        height: 250px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
     }
 }

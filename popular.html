@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KinoWEB - Популярное</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/network.js" defer></script>
 </head>
 
 <body>
@@ -29,85 +35,16 @@
     <a href="recommended.html">Рекомендуемое</a>
 </nav>
 
-<main>
-    <section class="movies-grid">
-        <article>
-            <img src="images/game_of_thrones.jpg" alt="Game of Thrones" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/shrek.jpg" alt="Shrek" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/How_I_met_your_mother.jpg" alt="How I met your mother" class="container">
-            <form action="https://met-mom.online/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article class="table-row">
-            <img src="images/star_wars.jpg" alt="Star Wars" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/wednsday.jpg" alt="Wednsday" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/supernatureal.jpg" alt="Supernatural" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/breaking_bad.jpg" alt="Breaking Bad" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/spiderman.jpg" alt="Spider_man" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/definitely_maybe.jpg" alt="Definitely, Maybe" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/the_walking_dead.jpg" class="container" alt="The Walking Dead">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/back_to_the_future.jpg" alt="Back to The Future" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-        <article>
-            <img src="images/am_horror_story.jpg" alt="American Horror Story" class="container">
-            <form action="https://big-bang-theory-kuraj-bambey.net/" class="filmbutton" method="get">
-                <button type="submit">Watch</button>
-            </form>
-        </article>
-    </section>
+<main class="main-content">
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <section class="movies-grid" id="movies-grid"></section>
 </main>
 
 <footer>
-    <p>Контакты: <a href="mailto:makkanygin@gmail.com">makkanygin@gmail.com</a></p>
+    <p>Some useful information about my site</p>
+    <p><a href="mailto:makkanygin@gmail.com">makkanygin@gmail.com</a></p>
 </footer>
 </body>
 
