@@ -11,27 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".action-buttons").appendChild(nextButton);
 
     async function loadMovie(id) {
-    try {
-    const response = await fetch(`${apiUrl}/${id}`);
-    if (!response.ok) {
-    throw new Error("Не удалось загрузить данные о фильме.");
-}
-    const data = await response.json();
+        try {
+            const response = await fetch(`${apiUrl}/${id}`);
+            if (!response.ok) {
+                throw new Error("Не удалось загрузить данные о фильме.");
+            }
+        const data = await response.json();
 
-    videoContainer.innerHTML = `
+        videoContainer.innerHTML = `
                 <iframe
                     src="//api.embess.ws/embed/movie/${data.id}"
                     allowfullscreen
                     allow="fullscreen; autoplay; encrypted-media">
                 </iframe>`;
 
-    descriptionText.textContent = data.description || "Описание отсутствует.";
+            descriptionText.textContent = data.description || "Описание отсутствует.";
 
-} catch (error) {
-    console.error("Ошибка при загрузке фильма:", error);
-    descriptionText.textContent = "Ошибка загрузки фильма. Попробуйте позже.";
-}
-}
+
+        }
+        catch (error) {
+            console.error("Ошибка при загрузке фильма:", error);
+            descriptionText.textContent = "Ошибка загрузки фильма. Попробуйте позже.";
+        }
+    }
 
     loadMovie(currentId);
     nextButton.addEventListener("click", () => {
