@@ -14,6 +14,12 @@ form {
     flex-direction: column;
 }
 
+button
+{
+    margin: 5px 0;
+    background-color: #cdcbc8;
+}
+
 label, select, input, button {
     margin: 5px 0;
 }
