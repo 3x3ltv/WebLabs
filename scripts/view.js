@@ -1,41 +1,47 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = "https://my-json-server.typicode.com/3x3ltv/kino-data/images"; // API URL
-    const videoContainer = document.getElementById("video-player-placeholder");
+document.addEventListener("DOMContentLoaded", async () => {
+    const apiUrl = "https://my-json-server.typicode.com/3x3ltv/kino-data/images";
+    const playerContainer = document.getElementById("video-player-placeholder");
     const descriptionText = document.querySelector(".description-text");
-    const nextButton = document.createElement("button");
+    const movieTitle = document.getElementById("movie-title");
+    const nextMovieButton = document.getElementById("next-movie-button");
 
-    let currentId = 1; // Начальный ID фильма
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentId = urlParams.get('id'); // id из строки запроса
+    currentId = currentId ? parseInt(currentId, 10) : 1;
 
-    nextButton.textContent = "Далее";
-    nextButton.style.marginTop = "20px";
-    document.querySelector(".action-buttons").appendChild(nextButton);
+    const videoBasePath = "/video/";
 
     async function loadMovie(id) {
-    try {
-    const response = await fetch(`${apiUrl}/${id}`);
-    if (!response.ok) {
-    throw new Error("Не удалось загрузить данные о фильме.");
-}
-    const data = await response.json();
+        try {
+            const response = await fetch(`${apiUrl}/${id}`);
+            if (!response.ok) {
+                throw new Error("Не удалось загрузить данные о фильме.");
+            }
 
-    videoContainer.innerHTML = `
-                <iframe
-                    src="//api.embess.ws/embed/movie/${data.id}"
-                    allowfullscreen
-                    allow="fullscreen; autoplay; encrypted-media">
-                </iframe>`;
+            const data = await response.json();
+            const videoUrl = `${videoBasePath}film${data.id}.mp4`;
 
-    descriptionText.textContent = data.description || "Описание отсутствует.";
+            playerContainer.innerHTML = "";
+            new Clappr.Player({
+                source: videoUrl,
+                parentId: "#video-player-placeholder",
+                autoPlay: false,
+                width: "100%",
+                height: "100%",
+            });
 
-} catch (error) {
-    console.error("Ошибка при загрузке фильма:", error);
-    descriptionText.textContent = "Ошибка загрузки фильма. Попробуйте позже.";
-}
-}
+            movieTitle.textContent = data.name || `Фильм ${id}`;
+            descriptionText.textContent = data.description || "Описание отсутствует.";
+        } catch (error) {
+            console.error("Ошибка при загрузке фильма:", error);
+            descriptionText.textContent = "Ошибка загрузки фильма. Попробуйте позже.";
+        }
+    }
 
     loadMovie(currentId);
-    nextButton.addEventListener("click", () => {
-    currentId++;
-    loadMovie(currentId);
-});
+
+    nextMovieButton.addEventListener("click", () => {
+        currentId++;
+        loadMovie(currentId);
+    });
 });
